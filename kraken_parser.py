@@ -47,7 +47,7 @@ def kraken_output_to_csv(file_path, output_path):
 
             parsed_lines.append([flag, sequence, taxonomy, taxid_block, length, mapping])
 
-    # Step 6: Write all parsed lines to CSV **once**
+    # Step 6: Write all parsed lines to CSV
     with open(output_path, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['Flag','ReadID','Taxonomy','TaxID','Length','Mapping'])
