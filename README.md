@@ -24,7 +24,7 @@ kraken2 \
   --report "${OUTDIR}/${BASENAME}_report.txt" \
   --output "${OUTDIR}/${BASENAME}_output.txt" \
   "$R1" "$R2"
-
+```
   Note: Changing Kraken2 parameters may affect the ability of the regex pattern to correctly split the output.
 
 ## Function ##
