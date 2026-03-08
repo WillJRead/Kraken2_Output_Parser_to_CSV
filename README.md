@@ -60,7 +60,7 @@ Parses a Kraken2 output file line by line, extracts key fields, and writes them 
 ```python
 from kraken_parser import kraken_output_to_csv
 
-input_file = r"C:\path\to\239_output.txt"
+input_file = r"C:\path\to\kraken_output.txt"
 output_file = r"C:\path\to\parsed_output.csv"
 
 kraken_output_to_csv(input_file, output_file)
