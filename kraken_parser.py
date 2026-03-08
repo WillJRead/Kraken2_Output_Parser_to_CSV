@@ -37,7 +37,7 @@ def kraken_output_to_csv(file_path, output_path):
             taxid_block = tax_match.group(2)
             line = line[tax_match.end():].lstrip()
 
-            # Step 4: Extract score (read length)
+            # Step 4: Extract paired read length 
             length_match = re.match(r'^(\d+\|\d+)', line)
             length = length_match.group()
             line = line[length_match.end():].lstrip()
@@ -50,7 +50,7 @@ def kraken_output_to_csv(file_path, output_path):
     # Step 6: Write all parsed lines to CSV **once**
     with open(output_path, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Flag','ReadID','Taxonomy','TaxID','Score','Mapping'])
+        writer.writerow(['Flag','ReadID','Taxonomy','TaxID','Length','Mapping'])
         writer.writerows(parsed_lines)
 
 kraken_output_to_csv(r"C:\Users\willi\OneDrive\Documents\University\Studies\Coding Repo\Projects for Practice\Personal\239_output.txt",r"C:\Users\willi\OneDrive\Documents\University\Studies\Coding Repo\Projects for Practice\Personal\kraken_simplified.csv")
